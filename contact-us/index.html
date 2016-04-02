@@ -123,11 +123,25 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOut
 		</tr>
 	</tbody>
 </table>
+
+<script type="text/javascript">
+var url = window.location.href; 
+/* --- Doc ready ---*/
+$(document).ready(function() {
+if (url.search("sent=yes") > 0) { 
+$(".email-message").css('display','block');
+} else { 
+$(".email-message").css('display','none');
+};
+/* --- End doc ready ---*/
+});
+</script>
+<div class="email-message"><h1>Thank you, your message has been sent.</h1><br><br></div>
 <h3>
 	Contact Form:</h3>
 <p>
 	Alternatively, you can use the form below to send us a message:</p>
-<form action="/contact-us"  accept-charset="UTF-8" method="post" id="webform-client-form-19" class="webform-client-form" >
+<form action="/contact-us?sent=yes"  accept-charset="UTF-8" method="post" id="webform-client-form-19" class="webform-client-form" >
 <div><div class="webform-component-textfield" id="webform-component-name"><div class="form-item" id="edit-submitted-name-wrapper">
  <label for="edit-submitted-name">Name: <span class="form-required" title="This field is required.">*</span></label>
  <input type="text" maxlength="128" name="name" id="edit-submitted-name" size="30" value="" class="form-text required" />
@@ -157,11 +171,9 @@ jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOut
  <textarea cols="50" rows="5" name="additional_information" id="edit-submitted-additional-information"  class="form-textarea resizable required"></textarea>
 </div>
 </div>
-<!-- <input type="submit" name="op" id="edit-submit" value="Submit"  class="form-submit" />
- -->
-  <input type="hidden" name="_to" value="team@variantstudios.com">
-  <input type="hidden" name="_subject" value="prosteelerectors.com - contact form">
-  <!-- <input type="hidden" name="_cc" value="sales.tracker@example.com"> -->
+  <!-- <input type="hidden" name="_to" value="phyllis@prosteelerectors.com"> -->
+  <input type="hidden" name="_to" value="brent@variantstudios.com">
+  <input type="hidden" name="_subject" value="ProSteelErectors.com - Contact Form">
   <input type="text" name="_gotcha" style="display: none;">
 <input type="submit" value="Send Message">
 
