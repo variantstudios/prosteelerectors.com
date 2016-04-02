@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#header #nav ul li a, #header ul li a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	padding-top: 13px;
+
+
+}
+
+#header #nav ul li a:hover {
+	text-decoration: none;
+	background-color: black;
+	background-image: url(../images/nav-hover-bg.gif);
+	background-repeat: no-repeat;
+	background-position: center 1px;
+}
+
+
+
+
+#header #nav ul li {
+	display: inline;
+	padding-right: 5px;
+	padding-left: 0px;
+	line-height: 45px;
+	padding-bottom:5px;
+}
+
+
+#footer-left  {
+overflow:hidden;
+word-wrap: break-word;
+}
